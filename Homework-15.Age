@@ -1,0 +1,34 @@
+using System;
+
+
+
+namespace Age
+{
+    class Age
+    {
+        static void Main()
+        {
+
+            var line = Console.ReadLine();
+            DateTime birthday = DateTime.Parse(line);
+
+            var birthdayDay = birthday.Day;
+            var birthdayMonth = birthday.Month;
+            var birthdayYear = birthday.Year;
+
+            var todayDay = DateTime.Now.Day;
+            var todayMonth = DateTime.Now.Month;
+            var todayYear = DateTime.Now.Year;
+
+            var currentAge = todayYear - birthdayYear;
+
+            if (birthdayMonth > todayMonth | (birthdayMonth == todayMonth & birthdayDay > todayDay))
+            {
+                currentAge--;
+            }
+            Console.WriteLine(currentAge);
+            var AgeAfter10Years = currentAge + 10;
+            Console.WriteLine(AgeAfter10Years);
+        }
+    }
+}
