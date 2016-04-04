@@ -1,8 +1,8 @@
 using System;
 
-namespace PrintSequence
+namespace LongSequence
 {
-    class PrintSequence
+    class LongSequence
     {
         public static void Main()
         {
