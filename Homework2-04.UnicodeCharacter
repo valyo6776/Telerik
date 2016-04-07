@@ -1,0 +1,15 @@
+using System;
+
+namespace UnicodeCharacter
+{
+    class Program
+    {
+        static void Main()
+
+        {
+            char unichar = '\u002A';    //0x2A = 42
+
+            Console.WriteLine(unichar);
+        }
+    }
+}
