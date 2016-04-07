@@ -1,0 +1,26 @@
+using System;
+
+namespace FloatOrDouble
+{
+    class Program
+    {
+        static void Main()
+        {
+            double a = 34.567839023;
+            float b = 12.345f;
+            double c = 8923.1234857;
+            float d = 3456.091f;
+
+            float e = 34.567839023f;    //precision lost!
+            double f = 12.345;          //unnecessary space occupied!
+            float g = 8923.1234857f;    //precision lost!
+            double h = 3456.091;        //unnecessary space occupied!
+
+            {
+                Console.WriteLine(a + "\n" + b + "\n" + c + "\n" + d);
+                Console.WriteLine(" ");
+                Console.WriteLine(e + "\n" + f + "\n" + g + "\n" + h);
+            }
+        }
+    }
+}
