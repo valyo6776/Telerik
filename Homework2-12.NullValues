@@ -1,0 +1,14 @@
+using System;
+class NullValuesArithmetic
+{
+    static void Main()
+    {
+
+        int? nullInt = null;
+
+        double? nullDouble = null;
+
+        Console.WriteLine("Null variables: {0} {1}", nullInt, nullDouble + "Nothing is actually printed :)");
+
+    }
+}
