@@ -1,0 +1,22 @@
+namespace IsoscelesTriangle
+{
+    using System;
+    using System.Text;
+
+    class IsoscelesTriangle
+    {
+        static void Main()
+        {
+            Console.OutputEncoding = Encoding.UTF8;
+
+            char symbol = '\u00A9';
+
+            {
+                Console.Write("    {0} \n", symbol);
+                Console.Write("   {0} {0} \n", symbol);
+                Console.Write("  {0}   {0} \n", symbol);
+                Console.Write(" {0} {0} {0} {0}\n", symbol);
+            }
+        }
+    }
+}
