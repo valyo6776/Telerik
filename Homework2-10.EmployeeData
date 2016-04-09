@@ -1,0 +1,22 @@
+using System;
+
+class EmployeeData
+{
+    static void Main()
+    {
+
+        Console.WriteLine("Enter Unique Employee's Number: ");
+
+        long uniqueEmployeeNumber = long.Parse(Console.ReadLine());
+
+        string firstName = "Ivan";
+        string lastName = "Petrov";
+        int age = 30;
+        char gender = 'm';
+        long personalIdNumber = 8306112507;
+        long uniqueEmplNumber = uniqueEmployeeNumber;
+
+        Console.WriteLine("This is the record of: \n {0} \n {1} \n Age: {2} \n Gender: {3} \n Personal ID Number: {4} \n Unique Employee Number: {5}", firstName, lastName, age, gender, personalIdNumber, uniqueEmplNumber);
+
+    }
+}
