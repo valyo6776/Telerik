@@ -1,0 +1,24 @@
+using System;
+
+
+class BankAccountData
+{
+    static void Main()
+    {
+        Console.WriteLine("Enter Holder's IBAN: ");
+        string iban = (Console.ReadLine());
+
+        string firstName = "Ivan";
+        string middleName = "Draganov";
+        string lastName = "Petkanov";
+        double balance = 156200.25;
+        string bankName = "OBB AD";
+        string iBAN = iban;
+        long creditCardNumber_1 = 1234567890;
+        long creditCardNumber_2 = 2345678901;
+        long creditCardNumber_3 = 3456789012;
+
+        Console.WriteLine("Holder: \n {0} \n {1} \n {2} \n Balance: {3} \n Bank: {4} \n IBAN: {5} \n CCNo1: {6}  \n CCNo2: {7}  \n CCNo3: {8}", firstName, middleName, lastName, balance, bankName, iban, creditCardNumber_1, creditCardNumber_2, creditCardNumber_3);
+
+    }
+}
