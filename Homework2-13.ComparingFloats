@@ -1,0 +1,18 @@
+using System;
+
+class ComparingFloats
+{
+    static void Main()
+    {
+
+        const double eps = 0.000001;
+
+        double a = double.Parse(Console.ReadLine());
+        double b = double.Parse(Console.ReadLine());
+
+        bool difference = Math.Abs(a - b) < eps;
+
+        Console.WriteLine(difference ? "true" : "false");
+
+    }
+}
