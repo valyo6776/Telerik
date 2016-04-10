@@ -1,0 +1,17 @@
+using System;
+
+class OddOrEven
+{
+    static void Main()
+    {
+
+        sbyte inputNumber = sbyte.Parse(Console.ReadLine());
+
+        sbyte processedNumber = Math.Abs(inputNumber);
+
+        string outputNumber = ((processedNumber % 2 == 1) ? "odd" : "even");
+
+        Console.WriteLine(outputNumber + " " + inputNumber);
+
+    }
+}
