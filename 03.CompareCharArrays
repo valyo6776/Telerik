@@ -1,0 +1,43 @@
+using System;
+
+namespace _03.CompareCharArrays
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //input
+            string str1 = Console.ReadLine();
+            string str2 = Console.ReadLine();
+
+            //initialize 2 arrays
+            char[] ch1 = str1.ToCharArray();
+            char[] ch2 = str2.ToCharArray();
+
+            //calculations
+            bool areEqual = true;
+            string result = null;
+
+            if (ch1.Length != ch2.Length)
+            {
+                areEqual = false;
+                result = (ch1.Length > ch2.Length) ? ">" : "<";
+            }
+            else
+            {
+                for (int i = 0; i < ch1.Length; i++)
+                {
+                    if (ch1[i] != ch2[i])
+                    {
+                        areEqual = false;
+                        result = (ch1[i] > ch2[i]) ? ">" : "<";
+                        break;
+                    }
+                }
+            }
+
+            Console.WriteLine(areEqual ? "=" : result);
+
+        }
+    }
+}
