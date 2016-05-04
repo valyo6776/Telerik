@@ -1,0 +1,44 @@
+using System;
+
+namespace _04.MaximalSequence
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //input
+            int n = int.Parse(Console.ReadLine());
+
+            //initialize array
+            int[] myArray = new int[n];
+
+            //input first integer
+            int firstInt = int.Parse(Console.ReadLine());
+            myArray[0] = firstInt;
+
+            //initialize 2 variables
+            int maxSequence = 0;
+            int tempSequence = 1;
+
+
+            //input next n-1 integers + calculations
+            for (int i = 1; i < n; i++)
+            {
+                myArray[i] = int.Parse(Console.ReadLine());
+
+                if (myArray[i] == myArray[i-1])
+                {
+                    tempSequence++;
+                    maxSequence = Math.Max(maxSequence, tempSequence);
+                }
+
+                else
+                {
+                    tempSequence = 1;
+                }
+            }
+
+            Console.WriteLine(maxSequence);
+        }
+    }
+}
