@@ -1,0 +1,21 @@
+using System;
+
+namespace _01.AllocateArray
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int n = int.Parse(Console.ReadLine());
+
+            int[] myArray = new int[n];
+
+            //foreach (int i in myArray) - does NOT work here!!!!!!!!!
+            for (int i = 0; i < myArray.Length; i++)
+            {
+                myArray[i] = i;
+                Console.WriteLine("{0}", myArray[i] * 5);
+            }
+        }
+    }
+}
