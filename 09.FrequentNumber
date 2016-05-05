@@ -1,0 +1,57 @@
+using System;
+
+namespace _09.FrequentNumber
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //input
+            int n = int.Parse(Console.ReadLine());
+
+            //initialize array
+            int[] myArray = new int[n];
+
+            //initialize 3 variables
+            int maxFrequent = 1;
+            int tempFrequent = 1;
+            int maxFrequentValue = 0;
+
+            //input array
+            for (int i = 0; i < n; i++)
+            {
+                myArray[i] = int.Parse(Console.ReadLine());
+            }
+
+            //calculations
+            Array.Sort(myArray);
+
+            for (int i = 0; i < n - 1; i++)
+            {
+                if (myArray[i] == myArray[i + 1])
+                {
+                    tempFrequent++;
+                }
+
+                else
+                {
+                    if (tempFrequent > maxFrequent)
+                    {
+                        maxFrequent = tempFrequent;
+                        maxFrequentValue = myArray[i];
+
+                    }
+                    tempFrequent = 1;
+                }
+            }
+
+            if (tempFrequent > maxFrequent)
+            {
+                maxFrequent = tempFrequent;
+                maxFrequentValue = myArray[n - 1];
+            }
+
+            Console.WriteLine("{0} ({1} times)", maxFrequentValue, maxFrequent);
+        }
+    }
+}
